@@ -1,0 +1,318 @@
+#! C:/Program Files/Nuke11.3v1/nuke-11.3.1.dll -nx
+version 11.3 v1
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1902" h="983" screen="0">
+        <splitter orientation="1">
+            <split size="46"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1134" stretch="1"/>
+            <splitter orientation="2">
+                <split size="547"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="384"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="714"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                <page id="uk.co.thefoundry.scripteditor.2"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/stuff/05_python/01_ibkstacker/ibk_stacker_v01.nk
+ lock_range true
+ format "1920 1080 0 0 1920 1080 1 FullHD"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement OCIO
+ defaultViewerLUT "OCIO LUTs"
+ workingSpaceLUT linear
+ monitorLut Show
+ int8Lut raw
+ int16Lut raw
+ logLut rec709
+ floatLut linear
+ addUserKnob {20 Deadline}
+ addUserKnob {1 FrameListMode l frameListMode}
+ addUserKnob {1 CustomFrameList l customFrameList}
+ addUserKnob {1 Department l department}
+ addUserKnob {1 Pool l pool}
+ addUserKnob {1 SecondaryPool l secondaryPool}
+ addUserKnob {1 Group l group}
+ addUserKnob {1 Priority l priority}
+ addUserKnob {1 MachineLimit l machineLimit}
+ addUserKnob {1 IsBlacklist l isBlacklist}
+ addUserKnob {1 MachineList l machineList}
+ addUserKnob {1 LimitGroups l limitGroups}
+ addUserKnob {1 SubmitSuspended l submitSuspended}
+ addUserKnob {1 ChunkSize l chunkSize}
+ addUserKnob {1 ConcurrentTasks l concurrentTasks}
+ addUserKnob {1 LimitConcurrentTasks l limitConcurrentTasks}
+ addUserKnob {1 Threads l threads}
+ addUserKnob {1 SubmitScene l submitScene}
+ addUserKnob {1 LocalRendering l LRD}
+ addUserKnob {1 BatchMode l batchMode}
+ addUserKnob {1 ContinueOnError l continueOnError}
+ addUserKnob {1 UseNodeRange l useNodeRange}
+ addUserKnob {1 UseGpu l useGpu}
+ addUserKnob {1 EnforceRenderOrder l enforceRenderOrder}
+ addUserKnob {1 DeadlineRenderMode l deadlineRenderMode}
+ addUserKnob {1 PerformanceProfiler l performanceProfiler}
+ addUserKnob {1 ReloadPlugin l reloadPlugin}
+ addUserKnob {1 PerformanceProfilerPath l performanceProfilerPath}
+ addUserKnob {1 CreateUploadMovie l createUploadMovie}
+ addUserKnob {1 CreateUploadFilmStrip l createUploadFilmStrip}
+ addUserKnob {1 UseDraft l useDraft}
+ addUserKnob {1 DraftQuick l draftQuick}
+ addUserKnob {1 DraftCodec l draftCodec}
+ addUserKnob {1 DraftFormat l draftFormat}
+ addUserKnob {1 DraftFrameRate l draftFrameRate}
+ addUserKnob {1 DraftResolution l draftResolution}
+ addUserKnob {1 DraftQuality l draftQuality}
+ addUserKnob {1 DraftTemplate l draftTemplate}
+ addUserKnob {1 DraftUser l draftUser}
+ addUserKnob {1 DraftEntity l draftEntity}
+ addUserKnob {1 DraftVersion l draftVersion}
+ addUserKnob {1 DraftExtraArgs l draftExtraArgs}
+ addUserKnob {1 ProjectManagement l projectManagement}
+ addUserKnob {1 DeadlineSGData l shotgunKVPs}
+ addUserKnob {1 DeadlineFTData l ftrackKVPs}
+ addUserKnob {1 DeadlineNIMData l nimKVPs}
+}
+Constant {
+ inputs 0
+ channels {-rgba.red rgba.green -rgba.blue none}
+ color 0.042
+ name Constant1
+ xpos -3
+ ypos -410
+}
+Roto {
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x44700000 x44070000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Ellipse1 512 bezier
+     {{cc
+       {f 8192}
+       {px 1
+        {xc345b7c8 0}
+        {x44588000 x42f80000}
+        {x4345b7c8 0}
+        {0 xc345b7ca}
+        {x44990000 x43f10000}
+        {0 x4345b7c8}
+        {x4345b7c8 0}
+        {x44588000 x44520000}
+        {xc345b7c8 0}
+        {0 x4345b7c8}
+        {x43fe0000 x43f10000}
+        {0 xc345b7ca}}}
+      {cc
+       {f 8192}
+       {p
+        {{{1 xc345b7c8}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 0}}}
+        {{{1 x4345b7c8}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 xc345b7ca}}}
+        {{{1 0}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 x4345b7c8}}}
+        {{{1 x4345b7c8}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 0}}}
+        {{{1 xc345b7c8}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 x4345b7c8}}}
+        {{{1 0}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 xc345b7ca}}}}}}
+     {tx 1 x44588000 x43f10000}
+     {a r 0 g 0 b 0 a 0 osw x41200000 osf 0 str 1 spx x44700000 spy x44070000 sb 1 tt x40e00000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 tt 7 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {960 540}
+ color 0
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name Roto1
+ xpos -3
+ ypos -312
+}
+set Nc786c800 [stack 0]
+IBKColourV3 {
+ name IBKColourV3_1
+ xpos -3
+ ypos -278
+ screen_type green
+ addUserKnob {20 User}
+ addUserKnob {22 test T "import nuke\nfor i in range(1,5):\n    nuke.createNode('Blur',  inpanel = True)" +STARTLINE}
+}
+IBKColourV3 {
+ name IBKColourV3_2
+ xpos -3
+ ypos -252
+ screen_type {{IBKColourV3_1.screen_type}}
+ Size {{IBKColourV3_1.Size}}
+ off {{IBKColourV3_1.off} {IBKColourV3_1.off} {IBKColourV3_1.off}}
+ mult {{IBKColourV3_1.mult} {IBKColourV3_1.mult} {IBKColourV3_1.mult}}
+ multi 1
+}
+IBKColourV3 {
+ name IBKColourV3_3
+ xpos -3
+ ypos -226
+ screen_type {{IBKColourV3_1.screen_type}}
+ Size {{IBKColourV3_1.Size}}
+ off {{IBKColourV3_1.off} {IBKColourV3_1.off} {IBKColourV3_1.off}}
+ mult {{IBKColourV3_1.mult} {IBKColourV3_1.mult} {IBKColourV3_1.mult}}
+ multi 2
+}
+IBKColourV3 {
+ name IBKColourV3_4
+ xpos -3
+ ypos -200
+ screen_type {{IBKColourV3_1.screen_type}}
+ Size {{IBKColourV3_1.Size}}
+ off {{IBKColourV3_1.off} {IBKColourV3_1.off} {IBKColourV3_1.off}}
+ mult {{IBKColourV3_1.mult} {IBKColourV3_1.mult} {IBKColourV3_1.mult}}
+ multi 4
+}
+IBKColourV3 {
+ name IBKColourV3_5
+ xpos -3
+ ypos -174
+ screen_type {{IBKColourV3_1.screen_type}}
+ Size {{IBKColourV3_1.Size}}
+ off {{IBKColourV3_1.off} {IBKColourV3_1.off} {IBKColourV3_1.off}}
+ mult {{IBKColourV3_1.mult} {IBKColourV3_1.mult} {IBKColourV3_1.mult}}
+ multi 8
+}
+IBKColourV3 {
+ name IBKColourV3_6
+ xpos -3
+ ypos -148
+ screen_type {{IBKColourV3_1.screen_type}}
+ Size {{IBKColourV3_1.Size}}
+ off {{IBKColourV3_1.off} {IBKColourV3_1.off} {IBKColourV3_1.off}}
+ mult {{IBKColourV3_1.mult} {IBKColourV3_1.mult} {IBKColourV3_1.mult}}
+ multi 16
+}
+IBKColourV3 {
+ name IBKColourV3_7
+ xpos -3
+ ypos -122
+ screen_type {{IBKColourV3_1.screen_type}}
+ Size {{IBKColourV3_1.Size}}
+ off {{IBKColourV3_1.off} {IBKColourV3_1.off} {IBKColourV3_1.off}}
+ mult {{IBKColourV3_1.mult} {IBKColourV3_1.mult} {IBKColourV3_1.mult}}
+ multi 32
+}
+IBKColourV3 {
+ name IBKColourV3_8
+ xpos -3
+ ypos -96
+ screen_type {{IBKColourV3_1.screen_type}}
+ Size {{IBKColourV3_1.Size}}
+ off {{IBKColourV3_1.off} {IBKColourV3_1.off} {IBKColourV3_1.off}}
+ mult {{IBKColourV3_1.mult} {IBKColourV3_1.mult} {IBKColourV3_1.mult}}
+ multi 64
+}
+push $Nc786c800
+IBKGizmoV3 {
+ inputs 2
+ name IBKGizmoV3_1
+ selected false
+ xpos 146
+ ypos -33
+}
+Viewer {
+ inputs 0
+ frame 1
+ frame_range 1-100
+ name Viewer1
+ xpos -338
+ ypos -49
+}
+push $Nc786c800
+Blur {
+ name Blur1
+ xpos 658
+ ypos -307
+ addUserKnob {20 User}
+ addUserKnob {22 test T "for i in range(1,5):\n    #nuke.nodes.Blur()\n    nuke.createNode('Blur')" +STARTLINE}
+}
+Blur {
+ name Blur2
+ xpos 658
+ ypos -269
+}
+Blur {
+ name Blur3
+ xpos 658
+ ypos -231
+}
+Blur {
+ name Blur4
+ xpos 658
+ ypos -193
+}
+Blur {
+ name Blur5
+ xpos 658
+ ypos -155
+}
+push $Nc786c800
+IBKColourV3 {
+ name IBKColourV3_9
+ xpos 483
+ ypos -235
+ screen_type green
+ addUserKnob {20 User}
+ addUserKnob {22 test T "for i in range(1,5):\n    #nuke.nodes.Blur()\n    nuke.createNode('IBKColourV3')" +STARTLINE}
+}
