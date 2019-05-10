@@ -111,7 +111,7 @@ def stack_ibk(_max,_bool):
         nuke.message("Please select an IBKColourV3, Dude")
         
     if nuke.selectedNode().Class() != "IBKColourV3":
-        nuke.message("Please select an IBKColourV3, Dude")
+        nuke.message("Please select an IBKColourV3, dude")
         return None
     else:
         
